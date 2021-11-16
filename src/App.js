@@ -1,10 +1,20 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @@Company: 
+ * @Author: FY01
+ * @Date: 2021-11-14 17:06:09
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-11-16 13:20:36
+ */
+
 import React, { Component } from 'react'
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 
+import LanguageButton from './components/LanguageButton';
 
 import { 
     ConfigProvider,
-    Radio,
 } from 'antd';
 import enUS from 'antd/es/locale/en_US';
 import zhCN from 'antd/es/locale/zh_CN';
@@ -21,7 +31,12 @@ class App extends Component {
           locale: enUS,
         };
       }
-    
+      /**
+       * @Author: FY01
+       * @Descripttion: 
+       * @param {*}
+       * @return {*}
+       */    
       changeLocale = e => {
         const localeValue = e.target.value;
         this.setState({ locale: localeValue });
@@ -34,14 +49,8 @@ class App extends Component {
     render() {
         const { locale } = this.state;
         return (
-            
-            // <BrowserRouter>
-            //     <Switch>
-            //         <Route path = "/" component = {Login}/>
-            //         <Route path = "/main" component = {Main}/>
-            //     </Switch>
-            // </BrowserRouter>
             <div>
+                {/* ConfigProvider : language config */}
                 <ConfigProvider locale={locale}>
                     <BrowserRouter>
                         <Switch>
@@ -51,19 +60,9 @@ class App extends Component {
                     </BrowserRouter>
                 </ConfigProvider>
 
-                <div className="change-locale">
-                    <span style={{ marginRight: 16 }}>Change Your Language: </span>
-                    <Radio.Group value={locale} onChange={this.changeLocale}>
-                    <Radio.Button key="en" value={enUS}>
-                        English
-                    </Radio.Button>
-                    <Radio.Button key="cn" value={zhCN}>
-                        中文
-                    </Radio.Button>
-                    </Radio.Group>
-                </div>
+                {/* change language */}
+                <LanguageButton locale = {locale} changeLocale = {this.changeLocale} enUS = {enUS} zhCN = {zhCN}/>
             </div>
-            
         )
     }
 }

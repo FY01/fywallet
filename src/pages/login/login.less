@@ -1,15 +1,30 @@
+/*
+ * @Descripttion: login page style
+ * @version: 
+ * @@Company: 
+ * @Author: FY01
+ * @Date: 2021-11-15 10:10:32
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-11-16 14:46:24
+ */
+
 .login {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     width: 100%;
     height: 100%;
+
     background-color: #D1DDDB;
+
 
     .login-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 80px;
+        height: 10vh;
         width: 100%;
-        background-color: #85B8CB;
+        background-color: #1d6a96;
 
         .header-logo {
             display: flex;
@@ -17,61 +32,67 @@
             align-items: center;
 
             img {
-                width: 60px;
-                height: 60px;
-                margin-left: 40px;
+                width: 5vh;
+                height: 5vh;
+                margin-left: 5vh;
             }
     
             h1 {
-                margin-left: 20px;
-                font-size: 40px;
+                margin-left: 2vh;
+                font-size: 5vh;
                 color: #fff;
                 text-decoration: underline;
             }
         }
 
         .network {
-            width: 200px;
-            height: 40px;
-            margin-right: 40px;
-            border-radius: 20px;
-            border:1px solid #283B42;
+            width: 20vh;
+            height: 5vh;
+            margin-right: 2vh;
+            border-radius: 5vh;
+            border: 0.1vh solid #283B42;
             background-color: transparent;
             // opacity: .5;
         }
     }
 
     .login-content {
-        margin: 50px auto;
-        width: 600px;
-        height: 800px;
-        border: 1px solid #283B42;
-        border-radius: 1px;
-        background-color: #fff;
-        box-shadow: 1px 1px 1px 1px #283B42;
+        flex: 1;
+        margin: 5vh auto;
+        width: 40vh;
+        height: 60vh;
+        // border: .1vh solid #283B42;
+        // border-radius: .5vh;
+        // background-color: #fff;
+        // box-shadow: 1px 1px 1px 1px #283B42;
 
-        padding: 20px 40px;
+        // padding: 20px 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
 
         img {
-            width: 150px;
-            height: 150px;
+            width: 20vh;
+            height: 20vh;
         }
 
         .regards {
             text-align: center;
-            font-size: 60px;
-            line-height: 40px;
+            font-size: 3vh;
+            line-height: 3vh;
 
             span {
-                font-size: 20px;
-                line-height: 20px;
+                font-size: 2vh;
+                line-height: 2vh;
                 color: rgba(0, 0, 0,.3);
             }
         }
     
+    }
+
+    .login-footer {
+        height: 15vh;
+        background-color: #1d6a96;
     }
 }

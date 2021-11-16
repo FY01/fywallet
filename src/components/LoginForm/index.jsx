@@ -1,6 +1,19 @@
+/*
+ * @Descripttion:  component be use in login
+ * @version: 
+ * @@Company: 
+ * @Author: FY01
+ * @Date: 2021-11-15 12:11:46
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-11-16 14:22:25
+ */
+
 import React from 'react';
 
+
 import { Form, Icon, Input, Button } from 'antd';
+
+import './index.less'
 
 class NormalLoginForm extends React.Component {
   handleSubmit = e => {
@@ -24,7 +37,7 @@ class NormalLoginForm extends React.Component {
             <Input
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
               type="password"
-              placeholder="密码"
+              placeholder="password"
             />,
           )}
         </Form.Item>
@@ -37,7 +50,7 @@ class NormalLoginForm extends React.Component {
           <Button type="primary" htmlType="submit" className="login-form-button">
             解锁
           </Button>
-          Or <a href = ":javascript" alt = "import using Secret Recovery Phrase">import using Secret Recovery Phrase</a>
+          Or <a className = "link" href = ":javascript" alt = "import using Secret Recovery Phrase">import using Secret Recovery Phrase</a>
         </Form.Item>
       </Form>
     );
